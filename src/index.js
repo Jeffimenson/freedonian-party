@@ -1,2 +1,1 @@
-console.log('Hello World!');
-const PooPsspSPDPSDA = 'farts';
+import './style.css';

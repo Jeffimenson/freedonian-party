@@ -1,0 +1,109 @@
+/* predeclarations I like */
+html {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+
+}
+
+body,
+html {
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input,
+label {
+    box-sizing: content-box;
+    border: none;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+    cursor: pointer;
+    display: block;
+}
+
+button:active,
+input:active,
+label:active {
+    cursor: default;
+}
+
+/* Actual styling stuff */
+body {
+    display: grid;
+    grid-template-rows: auto 500px 1fr auto;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 25px;
+}
+
+header #dropdown-toggler {
+    justify-self: left;
+}
+
+header h1 {
+    justify-self: center;
+    text-align: center;
+}
+
+header .button-set {
+    display: flex;
+    gap: 10px;
+    justify-self: right;
+}
+
+.button-set button {
+    padding: 4px 10px;
+    border: 2px solid crimson;
+}
+
+.banner {
+    background-image: url('banner.jpg');
+    background-size:cover;
+    background-position: 0% 15%;
+    flex: 1;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blurb {
+    text-align: center;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+footer {
+    background-color: rgb(193, 199, 206);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 30px 10%;
+}
+
+footer .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+footer ul {
+    list-style: none;
+    text-decoration: none;
+}
+
