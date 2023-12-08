@@ -139,7 +139,6 @@ button#join {
     background-position: 0% 50%;
     height: 600px;
     background-size: cover;
-
 }
 .text-group-container {
     margin: 0px 20%;
@@ -216,6 +215,14 @@ button#next {
     display: flex;
     gap: 10px;
     flex-direction: column;
+}
+
+div.priority {
+    color: white;
+    background-color: rgb(21, 21, 192);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px 10px;
 }
 
 .content-card p {
