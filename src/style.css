@@ -1,13 +1,17 @@
 /* predeclarations I like */
-html {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+:root {
+    --main-bg-color: rgb(256, 256, 256); 
+}
 
+html {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 body,
 html {
     height: 100%;
+    background-color: var(--main-bg-color);
 }
 
 * {
@@ -38,12 +42,12 @@ label:active {
 /* Actual styling stuff */
 body {
     display: grid;
-    grid-template-rows: auto 500px 1fr auto;
+    grid-template-rows: auto 700px 1fr auto;
 }
 
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     padding: 10px 25px;
 }
 
@@ -54,6 +58,25 @@ header #dropdown-toggler {
 header h1 {
     justify-self: center;
     text-align: center;
+
+    font-weight: 500;
+    letter-spacing: 3px;
+
+    position: relative;
+}
+
+header h1 span {
+    color: crimson;
+    text-shadow: 0px 2px 1px black;
+}
+.logo {
+    max-width: 90px;
+    position: absolute;
+    background-image: url('wolf-logo.png');
+    display: inline-block;
+    top: -7px;
+    left: -90px;
+    pointer-events: none;
 }
 
 header .button-set {
@@ -78,15 +101,171 @@ header .button-set {
     flex: 1;
     display: flex;
     flex-direction: column;
+
 }
 
 .blurb {
     text-align: center;
-    padding: 60px 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
 
+    padding: 30px 40px;
+    margin: 0px 20%;
+
+    background-color: rgb(0, 34, 128);
+    color: white;
+
+    position: relative;
+    top: -60px;
+}
+
+.blurb h2 {
+    font-size: 3rem;
+    letter-spacing: -1px;
+}
+
+button#join {
+    color: white;
+    background-color: crimson;
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: fit-content;
+    margin: 30px auto;
+}
+
+.inner-banner {
+    background-image: url(https://images.pexels.com/photos/8926546/pexels-photo-8926546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: 0% 50%;
+    height: 600px;
+    background-size: cover;
+
+}
+.text-group-container {
+    margin: 0px 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 40px;
+
+    position: relative;
+    top: -80px;
+    background-color: var(--main-bg-color);
+    padding: 40px;
+}
+
+.text-group-container button {
+    padding: 4px 10px;
+    border: 2px solid crimson;
+    width: 160px;
+    margin: 0 auto;
+}
+
+.text-group-container h3 {
+   text-align: center; 
+   font-size: 2rem;
+   margin-bottom: 20px;
+}
+
+h2.slider-title {
+    margin: 20px 20%;
+}
+.slider-container {
+    box-sizing: border-box;
+    height: 25rem;
+    margin: 0 20%;
+
+    margin-bottom: 70px;
+
+    position: relative;
+    height: 500px;
+}
+
+.slider-frame {
+    overflow-x: hidden;
+    height: 100%;
+}
+.slider {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    right: 0%;
+    transition: right 0.5s;
+}
+
+button#prev {
+    position: absolute;
+    top: calc(50% - (24px/2)); 
+    left: -25px;
+}
+
+button#next {
+    position: absolute;
+    right: -25px;
+    top: calc(50% - (24px/2)); 
+}
+
+.content-card {
+    flex: 1; 
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 15px 10px;
+
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.content-card p {
+    line-height: 30px;
+}
+
+div.cool-pics {
+    background-color: rgb(255, 139, 154);
+    height: 300px;
+    margin: 20px 30%;
+    display: flex;
+    gap: 70px;
+}
+
+div.cool-pics img{
+    flex: 1;
+    position: relative;
+    left: -30%;
+}
+
+div.cool-pics img:nth-child(1) {
+    max-width: 400px;
+    top: -30%;
+}
+
+div.cool-pics img:nth-child(2) {
+    max-width: 400px;
+    top: -5%;
+    height: 350px;
+}
+
+div.cool-pics img:nth-child(3) {
+    max-width: 400px;
+    bottom: -30%;
+}
+
+.please-donate {
+    padding: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 60px;
+}
+.please-donate p {
+    font-size: 2rem;
+}
+
+.please-donate button {
+    border: 2px solid crimson;
+    padding: 10px 16px;
+    font-size: 1.4rem;
 }
 
 footer {
@@ -102,8 +281,13 @@ footer .right {
     gap: 20px;
 }
 
+
 footer ul {
     list-style: none;
     text-decoration: none;
+    line-height: 30px;
 }
 
+footer ul li:first-child {
+    font-weight: 700;
+}
